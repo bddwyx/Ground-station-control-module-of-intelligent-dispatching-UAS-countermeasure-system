@@ -11,6 +11,8 @@ For version v1.0, we adopted Arduino Uno temporarily. Nucleo L432 based on STM32
 
 在版本1.0中，我们暂时采用Arduino Uno作为主控。为实现更精细的控制与更复杂的功能，后续可能采用基于STM32 L系列的Nucleo L432。
 
+![整体设计渲染图](https://github.com/bddwyx/Ground-station-control-module-of-intelligent-dispatching-UAS-countermeasure-system/blob/master/%E4%B8%8A%E5%9C%BA%E5%9B%BE1.JPG "整体设计渲染图")
+
 ## 通讯协议 Communication
 
 ### 下位机控制指令 Control commands on lower computer(MCU)
@@ -59,6 +61,18 @@ The quadrotor control command packet is six bytes, which is received by the SPI 
 
 ## 函数接口 API
 
+int read_position(void）
+描述 description：The raw data of the angle reading of the magnetic encoder is read through the IIC protocol. 通过IIC协议读取磁编码器的角度读数的原始数据。
+参数 parameter：
+返回值 return value：Type uint12, which divides the angle range of 0-360 degrees into 4096 parts, and evenly maps to 0-4095. 类型uint12，将0-360度的角度范围分为4096份，均匀映射到0-4095。
+
 ## 全局变量 Global Variables
 
 ## 效果图 Renderings
+
+![设计渲染图](https://github.com/bddwyx/Ground-station-control-module-of-intelligent-dispatching-UAS-countermeasure-system/blob/master/%E6%B8%B2%E6%9F%933.JPG)
+![设计渲染图](https://github.com/bddwyx/Ground-station-control-module-of-intelligent-dispatching-UAS-countermeasure-system/blob/master/%E6%B8%B2%E6%9F%934.JPG)
+![设计渲染图](https://github.com/bddwyx/Ground-station-control-module-of-intelligent-dispatching-UAS-countermeasure-system/blob/master/%E4%BF%AF%E8%A7%86%E5%9B%BE%E6%B8%B2%E6%9F%93.JPG)
+![爆炸渲染图](https://github.com/bddwyx/Ground-station-control-module-of-intelligent-dispatching-UAS-countermeasure-system/blob/master/%E7%88%86%E7%82%B8%E6%B8%B2%E6%9F%932.JPG)
+![爆炸渲染图](https://github.com/bddwyx/Ground-station-control-module-of-intelligent-dispatching-UAS-countermeasure-system/blob/master/%E7%88%86%E7%82%B8%E6%B8%B2%E6%9F%933.JPG)
+![爆炸渲染图](https://github.com/bddwyx/Ground-station-control-module-of-intelligent-dispatching-UAS-countermeasure-system/blob/master/%E4%BF%AF%E8%A7%86%E7%88%86%E7%82%B8%E5%9B%BE%E6%B8%B2%E6%9F%93.JPG)
