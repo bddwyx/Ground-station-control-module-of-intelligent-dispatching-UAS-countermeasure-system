@@ -31,8 +31,10 @@ The lower computer adopts UART protocol, 1+8+0+1, Baud Rate 38400.
 
 | 数据范围 |  0-19  | 20-21 |   22   |   23   |
 | :-----  | :----: | :----: | :----: | :----: |
-| 功能    | 雷达偏航角控制 | 雷达俯仰角控制 | 停转指令 | 自动巡航 |
-| 备注    | 对360°20均分 | 分为高低两档 |  | 任何其他指令将进入手动模式 |
+| 功能    | 雷达偏航角yaw控制 | 雷达俯仰角pitch控制 | 停转stop指令 | 自动巡航auto |
+| 备注    | 对360°进行20均分 | 分为高upper低horizontal两档 |  | 任何其他指令将进入手动manual模式 |
+
+The PID of the system is shown in the figure below.
 
 系统的PID效果图如下图所示。
 
@@ -47,9 +49,9 @@ Each data packet of the display command of the host computer is three bytes, the
 
 | 数据序号 | 0 | 1 | 2 |
 | :-----  | :----: | :----: | :----: |
-| 类型    | 8位整形 | 8位整形 | 8位无符号整形 |
-|   描述  | 显示坐标x | 显示坐标y | 径向速度绝对值 |
-|   备注  | 应当为正值 | 应当为负值 |   |
+| 类型    | 8位整形int8_t | 8位整形int8_t | 8位无符号整形uint8_t |
+|   描述  | 显示坐标x | 显示坐标y | 径向速度$v_r$绝对值 |
+|   备注  | 应当为正值pos | 应当为负值neg |   |
 
 ### 四旋翼控制指令 Quadrotor's commands
 
@@ -59,9 +61,9 @@ The quadrotor control command packet is six bytes, which is received by the SPI 
 
 | 数据序号 | 0 | 1 | 2 | 3 | 4 | 5 |
 | :-----  | :----: | :----: | :----: | :----: | :----: | :----: |
-| 类型    | 8位无符号整形 | 8位无符号整形 | 8位无符号整形 | 8位无符号整形 | 8位无符号整形 | 8位无符号整形 |
-|   描述  | 油门大小 | 偏航角控制 | 滚转角控制 | 俯仰角控制 | 功能按键 | 校验和 |
-|   备注  | 升降控制 |  运动方向  |  左右平移 |  前后平移  | 模式切换 | 前五位数据的和 |
+| 类型    | 8位无符号整形uint8_t | 8位无符号整形uint8_t | 8位无符号整形uint8_t | 8位无符号整形uint8_t | 8位无符号整形uint8_t | 8位无符号整形uint8_t |
+|   描述  | 油门大小acc | 偏航角控制yaw | 滚转角控制roll | 俯仰角控制pitch | 功能按键key | 校验和sum |
+|   备注  | 升降控制 |  运动方向  |  左右平移 |  前后平移  | 模式切换 | 前5位数据的和 |
 
 ## 函数接口 API
 
