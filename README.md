@@ -34,6 +34,10 @@ The lower computer adopts UART protocol, 1+8+0+1, Baud Rate 38400.
 | 功能    | 雷达偏航角控制 | 雷达俯仰角控制 | 停转指令 | 自动巡航 |
 | 备注    | 对360°20均分 | 分为高低两档 |  | 任何其他指令将进入手动模式 |
 
+系统的PID效果图如下图所示。
+
+![PID效果图](https://github.com/bddwyx/Ground-station-control-module-of-intelligent-dispatching-UAS-countermeasure-system/blob/master/PID%E6%95%88%E6%9E%9C%E5%9B%BE.jpg)
+
 
 ### 上位机显示指令 Display commands for host computer(PC)
 
