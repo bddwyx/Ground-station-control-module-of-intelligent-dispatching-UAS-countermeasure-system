@@ -4,7 +4,6 @@
 #include <Wire.h>
 #include <Servo.h>
 
-
 #define ARRAY_SIZE 5 //雷达得到的速度平均值用的
 #define PITCH1 9
 #define PITCH2 10
@@ -245,7 +244,7 @@ void loop() {
      
      //Serial.print(aim);
      //Serial.print('\t');
-     data = float(total)/float(count);
+     data = 33.0 * float(total)/float(count);
      if(data > 40){data = 40;};
      //data = 40;
      
@@ -267,5 +266,6 @@ void loop() {
      count = 0; total = 0;
 
      previous_mode = mode;
+     
     }
 } 
