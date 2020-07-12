@@ -15,37 +15,37 @@ For version v1.0, we adopted Arduino Uno temporarily. Nucleo L432 based on STM32
 
 ## 无人机反制概述 Overview of UAS countermeasure
 
-随着无人机行业的发展,部分无人机的违规飞行对一些特定地区带来的安全隐患日益突出，加强对民用无人机设备的管理已成为迫切需求。
-
 With the development of UAS industry, the potential safety hazard of some UASs flying illegally in some specific areas is becoming increasingly prominent and it is urgent to strengthen the management of civil UAS equipment.
 
-而在对无人机违规飞行行为的整治中，无人机反制是一种十分有效的措施。
+随着无人机行业的发展,部分无人机的违规飞行对一些特定地区带来的安全隐患日益突出，加强对民用无人机设备的管理已成为迫切需求。
 
 In the rectification of the illegal flight behavior of UAS, UAS counter control is a very effective measure.
 
-所谓无人机反制，指的就是利用反制设备，在短时间内迫使远距离低空无人机跌落、返回操作者处或平稳下降，进而实现对“管制区”飞行无人机的有效管控。
+而在对无人机违规飞行行为的整治中，无人机反制是一种十分有效的措施。
 
 The so-called UAS counter control refers to the use of counter equipment to force the long-distance and low altitude UAS to fall, then make UAS return to the operator or descend steadily in a short time, so as to realize the effective control of UAS flying in "control area".
 
-对于无人机反制，传统的反制措施通常为电磁干扰枪反制，即通过发射高能的2.4GHz或5.8GHz等频段的电磁波来定向干扰无人机的特定控制信号，或通过GPS的压制式干扰和欺骗式干扰对无人机的定位产生影响，以迫使无人机降落，从而达到无人机反制的目的。
+所谓无人机反制，指的就是利用反制设备，在短时间内迫使远距离低空无人机跌落、返回操作者处或平稳下降，进而实现对“管制区”飞行无人机的有效管控。
 
 For UAS countermeasures, the traditional countermeasures are usually electromagnetic interference gun countermeasures, that is, by transmitting high-energy electromagnetic waves of 2.4GHz or 5.8GHz frequency band to directionally interfere with the specific control signal of UAS, or through GPS suppression jamming and deceptive jamming to affect the positioning of UAS, so as to force UAS to land, and achieve the purpose of UAS countermeasures in the end.
 
-然而，传统的电磁干扰反制方式存在安全隐患与应用场景的限制。因为失去位置信息的无人机具有一定的坠毁概率，高处坠毁的无人机将会对下方的人群造成极大的安全威胁，并且由于其干扰方式的限定，设备难以对出于特定目的设计的无人机采取有效的反制措施，所以该反制方式并不完全适合人群密集或重要地点的安防工作。
+对于无人机反制，传统的反制措施通常为电磁干扰枪反制，即通过发射高能的2.4GHz或5.8GHz等频段的电磁波来定向干扰无人机的特定控制信号，或通过GPS的压制式干扰和欺骗式干扰对无人机的定位产生影响，以迫使无人机降落，从而达到无人机反制的目的。
 
 However, the traditional electromagnetic interference countermeasures have security risks and limitations of application scenarios. Because the UAV without location information has a certain probability of crash, and the high altitude crash UAV will cause a great security threat to the people below, and due to the limitation of its interference mode, the equipment is difficult to take effective countermeasures against the UAV designed for specific purposes, so the countermeasures are not fully suitable for the security work in crowded or important places.
 
-而且，在一些特定场合，比如机场等，反制设备发出的干扰信号可能影响机场飞机的正常起落。
+然而，传统的电磁干扰反制方式存在安全隐患与应用场景的限制。因为失去位置信息的无人机具有一定的坠毁概率，高处坠毁的无人机将会对下方的人群造成极大的安全威胁，并且由于其干扰方式的限定，设备难以对出于特定目的设计的无人机采取有效的反制措施，所以该反制方式并不完全适合人群密集或重要地点的安防工作。
 
 Moreover, in some special occasions, such as airports, the interference signals sent by the counter equipment may affect the normal landing and taking off of airport aircraft.
 
-除了上述提到的电磁干扰枪反制，世界各国也尝试了其他的反制措施。
+而且，在一些特定场合，比如机场等，反制设备发出的干扰信号可能影响机场飞机的正常起落。
 
 In addition to the above countermeasures against electromagnetic interference guns, countries around the world have also tried other countermeasures.
 
-例如，在2016年，荷兰警方已经通过训练老鹰的方式进行捕获式无人机反制，并在实践中取得了一定的成效；日本政府也曾通过成立“无人机捕猎小队”的方式通过拉网的方式捕获一些不规范飞行的无人机；上海交通大学的王红雨副教授也提出了无人机网捕式反制的概念并制作出样机，并在央视《机智过人》节目中有所体现。
+除了上述提到的电磁干扰枪反制，世界各国也尝试了其他的反制措施。
 
 For example, in 2016, the Dutch police have trained eagles to carry out capture type UAV countermeasures, and achieved certain results in practice; the Japanese government has also established a "UAV hunting team" to capture some non-standard flying UAVs through the way of netting; Wang Hongyu, associate professor of Shanghai Jiaotong University, also put forward the concept of Net Countermeasures of UAV and prototype are produced, which are reflected in CCTV's "smart man" program.
+
+例如，在2016年，荷兰警方已经通过训练老鹰的方式进行捕获式无人机反制，并在实践中取得了一定的成效；日本政府也曾通过成立“无人机捕猎小队”的方式通过拉网的方式捕获一些不规范飞行的无人机；上海交通大学的王红雨副教授也提出了无人机网捕式反制的概念并制作出样机，并在央视《机智过人》节目中有所体现。
 
 ## 通讯协议 Communication
 
