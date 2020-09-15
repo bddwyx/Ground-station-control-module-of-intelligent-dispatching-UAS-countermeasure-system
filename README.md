@@ -2,6 +2,11 @@
 
 # 智能调度无人机地面站控制模块
 
+## 开源协议 Public license
+The project is under WTFPL license
+
+本项目遵循WTFPL协议
+
 ## 总述 Description
 A control system for ground stations that serve as the central processing unit of UAS contermeasurement.
 
