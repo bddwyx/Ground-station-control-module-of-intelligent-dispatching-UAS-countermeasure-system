@@ -73,7 +73,7 @@ The PID of the system is shown in the figure below.
 系统的PID效果图如下图所示。
 
 ![PID效果图](https://github.com/bddwyx/Ground-station-control-module-of-intelligent-dispatching-UAS-countermeasure-system/blob/master/PID%E6%95%88%E6%9E%9C%E5%9B%BE.jpg)
-
+![PID效果图2](https://github.com/bddwyx/Ground-station-control-module-of-intelligent-dispatching-UAS-countermeasure-system/blob/master/PID%E6%95%88%E6%9E%9C%E5%9B%BE2.png)
 
 ### 上位机显示指令 Display commands for host computer(PC)
 
@@ -101,19 +101,19 @@ The quadrotor control command packet is six bytes, which is received by the SPI 
 
 ## 函数接口 API
 
-*int read_position(void）
+* int read_position(void）
 
 描述 description：The raw data of the angle reading of the magnetic encoder is read through the IIC protocol. 通过IIC协议读取磁编码器的角度读数的原始数据。   
 参数 parameter：   
 返回值 return value：Type uint12, which divides the angle range of 0-360 degrees into 4096 parts, and evenly maps to 0-4095. 类型uint12，将0-360度的角度范围分为4096份，均匀映射到0-4095。   
 
-*int  move_to_yaw(int)
+* int  move_to_yaw(int)
 
 描述 description：Point thr radar at the desired position. 使雷达转动到对应角度。   
 参数 parameter：uint8, valid input shall be in range 0 to 19. uint8 ，合法的输入值需要在0-19之间。   
 返回值 return value：return 1 when a input is valid and a successful move is done, return 0 if the parameter is invalid. 输入合法时返回1，无效输入则返回-1，并且不修改雷达目标角度。   
 
-*void stop_and_read(void)
+* void stop_and_read(void)
 
 描述 description：print the velocity value radar detected while stop it。 使得雷达停在当前角度测量并打印出雷达读数。   
 参数 parameter：   
